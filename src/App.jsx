@@ -1,13 +1,19 @@
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Features from './components/Features';
+import Showcase from './components/Showcase';
+import Marquee from './components/Marquee';
+import CTA from './components/CTA';
 import Footer from './components/Footer';
 
 function GradientBackground() {
   return (
     <div aria-hidden className="fixed inset-0 -z-0">
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-indigo-50 via-white to-white dark:from-neutral-950 dark:via-neutral-950 dark:to-neutral-950" />
-      <div className="pointer-events-none absolute left-1/2 top-1/3 -translate-x-1/2 blur-3xl opacity-40 dark:opacity-30" style={{ width: 900, height: 900, background: 'radial-gradient(closest-side, rgba(99,102,241,0.35), transparent 70%)' }} />
+      <div
+        className="pointer-events-none absolute left-1/2 top-1/3 -translate-x-1/2 blur-3xl opacity-40 dark:opacity-30"
+        style={{ width: 900, height: 900, background: 'radial-gradient(closest-side, rgba(99,102,241,0.35), transparent 70%)' }}
+      />
     </div>
   );
 }
@@ -19,7 +25,9 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
+        <Marquee />
         <Features />
+        <Showcase />
         {/* Security + CTA Section */}
         <section id="security" className="py-16 sm:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10 items-center">
@@ -56,6 +64,7 @@ export default function App() {
             </div>
           </div>
         </section>
+        <CTA />
       </main>
       <Footer />
     </div>
